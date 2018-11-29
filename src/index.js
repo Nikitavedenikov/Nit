@@ -173,20 +173,20 @@ $(".formend").on('click',function(){
 	var email=$( "#email" ).val()+".com";
 	var result =" name="+name+"&email="+email+"&phone="+phone;
     if(_cart_products==null) {
-     $('.errors').append(`<span class="text-danger">Додайте товари в корзину для оформлення замовлення!</span>`)
+     $('.errors').append(`<span class="text-danger">Add products to the cart to make an odrer!</span>`)
       return;
     }
      if(!isLetter(name)){   	
-    	$('.errors').append(`<span class="text-danger">Некоректно введене ім'я !</span>`)
+    	$('.errors').append(`<span class="text-danger">Invalid name entered</span>`)
       return;
     };
     if(!isNumeric(phone)){
-    	$('.errors').append(`<span class="text-danger">Некоректно введений номер телефону!</span>`)
+    	$('.errors').append(`<span class="text-danger">Incorrectly entered phone number!</span>`)
       return;
     };
    
      if(!isemail(email)){  
-     $('.errors').append(`<span class="text-danger">Некоректно введена електронна адреса!</span>`) 	
+     $('.errors').append(`<span class="text-danger">Invalid email address entered!</span>`) 	
       return;
     };
     for(var i = 0; i < _cart_products.length ; i++){
@@ -207,6 +207,5 @@ $(".formend").on('click',function(){
     },error: function(xhr){
 			alert("An error occured: " + xhr.status + " " + xhr.statusText);
 	 	},
-	
 	});
 });
