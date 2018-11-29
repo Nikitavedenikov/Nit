@@ -72,7 +72,7 @@ function makeCort(){
 	$('.errors').empty();
 	$('.total').empty();
 	var cart_products=getCartData();
-	if(cart_products==null||cart_products.length==0){$('.modal-body').append(`<span> Корзина пуста!!! Додайте елементи</span>`)}
+	if(cart_products==null||cart_products.length==0){$('.modal-body').append(`<span> Cart is empty!!! Add new products</span>`)}
   	else{cart_products.forEach(product => $('.modal-body').append(_makeCartProducts(product)))
   	var res=result();
   	$('.d-flex').after(function() {
