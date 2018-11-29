@@ -1,0 +1,106 @@
+  @import "~bootstrap/scss/bootstrap";
+  * {
+ 	&, &:before, &:after {
+ 		margin: 0;
+ 		padding: 0;
+ 		box-sizing: border-box;
+ 	}
+ }
+ 
+ html {
+ 	font-family: Arial, sans-serif;
+}
+.product{
+	padding: 10px;
+	margin:4%;
+	margin-top: 10px;
+}
+.main{
+	margin-top: 70px;
+	margin-bottom:40px;
+}
+.product-image { 
+	max-height: 200px;
+	object-fit: contain;
+}
+.endcort{
+	background: white;
+}
+.card1{
+	flex: 1 1 auto;
+}
+/*.sidecort{
+	height:0;
+	width: 0;  
+	background:grey; 
+	right:0;
+	border-left: 2px solid black;
+	position: fixed;
+	z-index: 20;
+	overflow:hidden; 
+}*/
+.cortitem{
+	margin-top: 10px;
+	padding: 10px;
+}
+.scroll{
+	overflow-y:auto;
+	max-height: 200px;
+}
+.expanded{
+	height:100%;
+	width: 400px;  
+	overflow:hidden; 
+}
+.product-title{
+	font-size: 20px;
+}
+.categ{
+	margin: 2px;
+}
+.with{
+	text-decoration: grey line-through;
+}
+.product-special_price{
+	font-weight: bold;
+	margin-left:30px;
+	font-size: 20px;
+}
+.product-price{
+	font-size: 20px;
+}
+.check{
+	margin-top: 100%;
+}
+.bottom{
+	position: absolute;
+	top: 100%;
+	height: 50px;
+	background: green;
+	width: 100%;
+}
+.info{
+	margin-right: 10px;
+	margin-bottom: 5px;
+	float:right;
+}
+.buy{
+	margin-left: 10px;
+	float:left;
+}
+.container{
+	background: lightgrey;
+}
+.delete{
+	float: right;
+}
+.total{
+	font-weight: bold;
+	font-size: 20px;
+}
+.form{
+	margin:10px;
+}
+.formend{
+	margin:5px;
+}
