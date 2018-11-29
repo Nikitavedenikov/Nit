@@ -72,7 +72,7 @@ function makeCort(){
 	$('.errors').empty();
 	$('.total').empty();
 	var cart_products=getCartData();
-	if(cart_products==null||cart_products.length==0){$('.modal-body').append(`<span>Корзина пуста!! Додайте елементи</span>`)}
+	if(cart_products==null||cart_products.length==0){$('.modal-body').append(`<span> Корзина пуста!!! Додайте елементи</span>`)}
   	else{cart_products.forEach(product => $('.modal-body').append(_makeCartProducts(product)))
   	var res=result();
   	$('.d-flex').after(function() {
@@ -173,19 +173,20 @@ $(".formend").on('click',function(){
 	var email=$( "#email" ).val()+".com";
 	var result =" name="+name+"&email="+email+"&phone="+phone;
     if(_cart_products==null) {
-     $('.errors').append(`<span class="text-danger">Додайте товари в корзину для оформлення заказу!</span>`)
+     $('.errors').append(`<span class="text-danger">Додайте товари в корзину для оформлення замовлення!</span>`)
       return;
     }
+     if(!isLetter(name)){   	
+    	$('.errors').append(`<span class="text-danger">Некоректно введене ім'я !</span>`)
+      return;
+    };
     if(!isNumeric(phone)){
-    	$('.errors').append(`<span class="text-danger">Некоректно введенний номер телефону!</span>`)
+    	$('.errors').append(`<span class="text-danger">Некоректно введений номер телефону!</span>`)
       return;
     };
-    if(!isLetter(name)){   	
-    	$('.errors').append(`<span class="text-danger">Некоректно введенний імя !</span>`)
-      return;
-    };
+   
      if(!isemail(email)){  
-     $('.errors').append(`<span class="text-danger">Некоректно введенна електронна адреса!</span>`) 	
+     $('.errors').append(`<span class="text-danger">Некоректно введена електронна адреса!</span>`) 	
       return;
     };
     for(var i = 0; i < _cart_products.length ; i++){
